@@ -35,3 +35,26 @@ btn2.style.padding = "8px 16px";
 btn2.style.fontSize = "1.7rem";
 btn2.style.border = "none";
 btn2.style.borderRadius = "10px";
+
+function buttonClick() {
+  console.log("SIAP!");
+}
+
+function cetakText() {
+  const dicetak = document.createElement("h3");
+  dicetak.textContent = "Alfin Budiyanto";
+  // dicetak.style.display = "none";
+  body.append(dicetak);
+  return dicetak;
+}
+
+function ubahWarnaText() {
+  const warnaDiiUbah = cetakText();
+  console.log(warnaDiiUbah);
+  // warnaDiiUbah.style.display = "none";
+  // warnaDiiUbah.style.display = "block";
+  warnaDiiUbah.style.color = "salmon";
+  body.append(warnaDiiUbah);
+}
+
+// TINGGAL MENGUBAH ELEMEN MENJADI BERWARNA SAAT MOUSE KELUAR
