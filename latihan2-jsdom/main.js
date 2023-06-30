@@ -25,36 +25,27 @@ function oriText() {
   btn1.textContent = defaultText;
 }
 
-// Tugas
+// Tugas!
+// Button ke-2
 const defaultText2 = "Klik Saya 2";
 btn2.textContent = defaultText2;
 
 btn2.style.display = "block";
 btn2.style.background = "salmon";
-btn2.style.padding = "8px 16px";
-btn2.style.fontSize = "1.7rem";
+btn2.style.padding = "7px 14px";
+btn2.style.fontSize = "1.3rem";
 btn2.style.border = "none";
-btn2.style.borderRadius = "10px";
-
-function buttonClick() {
-  console.log("SIAP!");
-}
+btn2.style.borderRadius = "6px";
 
 function cetakText() {
-  const dicetak = document.createElement("h3");
-  dicetak.textContent = "Alfin Budiyanto";
-  // dicetak.style.display = "none";
-  body.append(dicetak);
-  return dicetak;
+  const membuat = document.createElement("h3");
+  membuat.textContent = "Alfin Budiyanto";
+  body.append(membuat);
 }
 
 function ubahWarnaText() {
-  const warnaDiiUbah = cetakText();
-  console.log(warnaDiiUbah);
-  // warnaDiiUbah.style.display = "none";
-  // warnaDiiUbah.style.display = "block";
-  warnaDiiUbah.style.color = "salmon";
-  body.append(warnaDiiUbah);
+  const copy = document.createElement("h3");
+  copy.textContent = "Alfin Budiyanto";
+  copy.style.color = "salmon";
+  body.append(copy);
 }
-
-// TINGGAL MENGUBAH ELEMEN MENJADI BERWARNA SAAT MOUSE KELUAR
