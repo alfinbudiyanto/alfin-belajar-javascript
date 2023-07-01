@@ -1,28 +1,34 @@
 // Tugas ke-1
-const user = prompt("masukkan jumlah saldo!");
-const jmlBelanja = prompt("masukkan jumlah seluruh belanjaan breee!");
+let pertanyaan = true;
 
-let saldoAwal = user;
-let bayarBelanja = jmlBelanja;
+while (pertanyaan) {
+  const user = prompt("masukkan jumlah saldo!");
+  const jmlBelanja = prompt("masukkan jumlah seluruh belanjaan breee!");
 
-let saldoTersisa = saldoAwal - bayarBelanja;
+  const saldoAwal = user;
+  console.log(saldoAwal);
+  const bayarBelanja = jmlBelanja;
 
-if (saldoAwal < bayarBelanja) {
-  // let kurang = saldoTersisa - saldoTersisa;
-  let jmlKurang = bayarBelanja - saldoAwal;
-  alert(`maaf, saldo anda kurang Rp.${jmlKurang}`);
-} else if (saldoAwal === bayarBelanja) {
-  alert(
-    `saldo anda Rp.${saldoAwal} dan harga belanjaan Rp.${bayarBelanja} saldo anda habis`
-  );
-} else {
-  alert(
-    `saldo anda Rp.${saldoAwal} dan anda belanja dengan harga Rp.${bayarBelanja} sisa saldo anda adalah Rp.${saldoTersisa}`
-  );
+  const saldoTersisa = saldoAwal - bayarBelanja;
+
+  if (saldoAwal < bayarBelanja) {
+    const jmlKurang = bayarBelanja - saldoAwal;
+    alert(`maaf, saldo anda kurang Rp. ${jmlKurang}`);
+  } else if (saldoAwal === bayarBelanja) {
+    alert(
+      `saldo anda Rp. ${saldoAwal} dan harga belanjaan Rp. ${bayarBelanja} saldo anda habis`
+    );
+  } else {
+    alert(
+      `saldo anda Rp. ${saldoAwal} dan anda belanja dengan harga Rp. ${bayarBelanja} sisa saldo anda adalah Rp. ${saldoTersisa}`
+    );
+  }
+
+  pertanyaan = confirm("Masih ada belanjaan gak cuyyy...?");
 }
 
 // Tugas ke-2
-let hari = new Date().getDay();
+const hari = new Date().getDay();
 
 switch (hari) {
   case 0:
