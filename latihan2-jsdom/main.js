@@ -1,6 +1,5 @@
 const body = document.body;
 const btn1 = document.getElementById("btn1");
-const btn2 = document.querySelector(".btn2");
 
 const defaultText = "Klik Saya 1";
 btn1.textContent = defaultText;
@@ -27,6 +26,8 @@ function oriText() {
 
 // Tugas!
 // Button ke-2
+const btn2 = document.querySelector(".btn2");
+
 const defaultText2 = "Klik Saya 2";
 btn2.textContent = defaultText2;
 
@@ -37,15 +38,25 @@ btn2.style.fontSize = "1.3rem";
 btn2.style.border = "none";
 btn2.style.borderRadius = "6px";
 
-function cetakText() {
+btn2.addEventListener("mouseover", function () {
+  btn2.addEventListener("mouseout", function () {
+    btn2.style.background = "salmon";
+    btn2.style.color = "black";
+    btn2.textContent = defaultText2;
+
+    membuat.style.color = "salmon";
+    body.append(membuat);
+  });
+
+  const namaSaya = "DI Klik Bro!";
+  btn2.textContent = namaSaya;
+
   const membuat = document.createElement("h3");
   membuat.textContent = "Alfin Budiyanto";
   body.append(membuat);
-}
+});
 
-function ubahWarnaText() {
-  const copy = document.createElement("h3");
-  copy.textContent = "Alfin Budiyanto";
-  copy.style.color = "salmon";
-  body.append(copy);
+function warnaBG() {
+  btn2.style.background = "dodgerblue";
+  btn2.style.color = "white";
 }
