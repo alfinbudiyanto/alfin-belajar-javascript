@@ -1,3 +1,4 @@
+/**
 let pertanyaan = true;
 
 while (pertanyaan) {
@@ -64,4 +65,20 @@ function jajargenjang(a, t) {
 // Untuk mengubah tipe string ke integer & menampilkan pertanyaan
 function tanya(tanya) {
   return parseInt(prompt(tanya));
+}
+*/
+
+const namaKaryawan = prompt("Nama :");
+const gajiPerHari = prompt("Gaji/hari :");
+const jmlHariMasuk = prompt("Jumlah hari masuk kerja :");
+
+console.log(
+  `nama : ${namaKaryawan}, gaji dalam 1 bulan ${gajiPerHari * jmlHariMasuk}`
+);
+
+gajiSatuBln(gajiPerHari, jmlHariMasuk);
+
+// Fungsi untuk hitung gaji
+function gajiSatuBln(satuHari, masukKerja) {
+  return satuHari * masukKerja;
 }
