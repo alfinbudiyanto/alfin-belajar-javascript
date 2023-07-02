@@ -1,26 +1,23 @@
 // Tugas ke-1
-let pertanyaan = true;
+let pertanyaan = confirm("Ingin memeriksa saldo?");
 
 while (pertanyaan) {
-  const user = prompt("masukkan jumlah saldo!");
-  const jmlBelanja = prompt("masukkan jumlah seluruh belanjaan breee!");
+  const userSaldoAwal = parseInt(prompt("Masukkan jumlah saldo!"));
+  const bayarJmlBelanja = parseInt(
+    prompt("Masukkan jumlah seluruh belanjaan breee!")
+  );
 
-  const saldoAwal = user;
-  console.log(saldoAwal);
-  const bayarBelanja = jmlBelanja;
-
-  const saldoTersisa = saldoAwal - bayarBelanja;
-
-  if (saldoAwal < bayarBelanja) {
-    const jmlKurang = bayarBelanja - saldoAwal;
-    alert(`maaf, saldo anda kurang Rp. ${jmlKurang}`);
-  } else if (saldoAwal === bayarBelanja) {
+  if (userSaldoAwal < bayarJmlBelanja) {
+    alert(`Maaf, saldo anda kurang Rp. ${bayarJmlBelanja - userSaldoAwal}`);
+  } else if (userSaldoAwal === bayarJmlBelanja) {
     alert(
-      `saldo anda Rp. ${saldoAwal} dan harga belanjaan Rp. ${bayarBelanja} saldo anda habis`
+      `Saldo anda Rp. ${userSaldoAwal} dan harga belanjaan Rp. ${bayarJmlBelanja} saldo anda habis`
     );
   } else {
     alert(
-      `saldo anda Rp. ${saldoAwal} dan anda belanja dengan harga Rp. ${bayarBelanja} sisa saldo anda adalah Rp. ${saldoTersisa}`
+      `Saldo anda Rp. ${userSaldoAwal} dan anda belanja dengan harga Rp. ${bayarJmlBelanja} sisa saldo anda adalah Rp. ${
+        userSaldoAwal - bayarJmlBelanja
+      }`
     );
   }
 
@@ -28,34 +25,45 @@ while (pertanyaan) {
 }
 
 // Tugas ke-2
-const hari = new Date().getDay();
-
-switch (hari) {
+switch (new Date().getDay()) {
   case 0:
-    day = "Sunday";
-    console.log(`hari ini adalah hari ${day}`);
+    hari = "Minggu";
+    cetakLayar(hari);
     break;
+
   case 1:
-    day = "Monday";
-    console.log(`hari ini adalah hari ${day}`);
+    hari = "Senin";
+    cetakLayar(hari);
     break;
+
   case 2:
-    day = "Tuesday";
-    console.log(`hari ini adalah hari ${day}`);
+    hari = "Selasa";
+    cetakLayar(hari);
     break;
+
   case 3:
-    day = "Wednesday";
-    console.log(`hari ini adalah hari ${day}`);
+    hari = "Rabu";
+    cetakLayar(hari);
     break;
+
   case 4:
-    day = "Thursday";
-    console.log(`hari ini adalah hari ${day}`);
+    hari = "Kamis";
+    cetakLayar(hari);
     break;
+
   case 5:
-    day = "Friday";
-    console.log(`hari ini adalah hari ${day}`);
+    hari = "Jum'at";
+    cetakLayar(hari);
     break;
+
   default:
-    day = "Saturday";
-    console.log(`hari ini adalah hari ${day}`);
+    hari = "Sabtu";
+    cetakLayar(hari);
+}
+
+function cetakLayar(h) {
+  const body = document.body;
+  const heading = document.createElement("h3");
+  heading.textContent = `Hari ini adalah hari ${h}`;
+  body.append(heading);
 }
