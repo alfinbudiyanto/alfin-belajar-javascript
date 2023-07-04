@@ -68,17 +68,41 @@ function tanya(tanya) {
 }
 */
 
-const namaKaryawan = prompt("Nama :");
-const gajiPerHari = prompt("Gaji/hari :");
-const jmlHariMasuk = prompt("Jumlah hari masuk kerja :");
+// Fungsi cek bulan
 
-console.log(
-  `nama : ${namaKaryawan}, gaji dalam 1 bulan ${gajiPerHari * jmlHariMasuk}`
-);
+const namaKaryawan = "Asep";
+const gajiPerhari = 10000;
+const bulanDiGaji = "Januari";
+const jmlBekerja = 31;
 
-gajiSatuBln(gajiPerHari, jmlHariMasuk);
+cekHari(bulanDiGaji);
+hitungGaji(gajiPerhari, jmlBekerja);
 
-// Fungsi untuk hitung gaji
-function gajiSatuBln(satuHari, masukKerja) {
-  return satuHari * masukKerja;
+// Fungsi untuk menghitung gaji
+// Fungsi gaji
+function hitungGaji(gajiPerhari, jmlBekerja) {
+  return console.log(gajiPerhari * jmlBekerja);
+}
+
+// Fungsi bulan
+function cekHari(bulanDiGaji) {
+  const bulan = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
+
+  for (let i = 1; i <= bulan.length - 1; i++) {
+    // if (bulan.length == bulanDiGaji)
+    return console.log(`${bulan}`);
+  }
 }
