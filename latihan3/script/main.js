@@ -1,5 +1,4 @@
-/**
-let pertanyaan = true;
+let pertanyaan = prompt("Mau menghitung gak euuy?");
 
 while (pertanyaan) {
   const user = prompt(
@@ -38,6 +37,12 @@ while (pertanyaan) {
   pertanyaan = confirm("Menghitung lagi?");
 }
 
+const namaKaryawan = prompt("Spill nama euy!");
+const gajiPerhari = tanya(`Masukkan gaji /hari elu euy!`);
+const jmlBekerja = tanya(`Masukkan jumlah hari elu masuk kerja euy!`);
+
+hitungGaji(namaKaryawan, gajiPerhari, jmlBekerja);
+
 // Fungsi untuk Matematika
 // Lingkaran
 function lingkaran(jariJari) {
@@ -66,43 +71,14 @@ function jajargenjang(a, t) {
 function tanya(tanya) {
   return parseInt(prompt(tanya));
 }
-*/
 
-// Fungsi cek bulan
-
-const namaKaryawan = "Asep";
-const gajiPerhari = 10000;
-const bulanDiGaji = "Januari";
-const jmlBekerja = 31;
-
-cekHari(bulanDiGaji);
-hitungGaji(gajiPerhari, jmlBekerja);
-
-// Fungsi untuk menghitung gaji
-// Fungsi gaji
-function hitungGaji(gajiPerhari, jmlBekerja) {
-  return console.log(gajiPerhari * jmlBekerja);
-}
-
-// Fungsi bulan
-function cekHari(bulanDiGaji) {
-  const bulan = [
-    "Januari",
-    "Februari",
-    "Maret",
-    "April",
-    "Mei",
-    "Juni",
-    "Juli",
-    "Agustus",
-    "September",
-    "Oktober",
-    "November",
-    "Desember",
-  ];
-
-  for (let i = 1; i <= bulan.length - 1; i++) {
-    // if (bulan.length == bulanDiGaji)
-    return console.log(`${bulan}`);
+// Fungsi menghitung gaji
+function hitungGaji(namaKaryawan, gajiPerhari, jmlBekerja) {
+  if (jmlBekerja > 31) {
+    return console.log(`Hanya ada 31 hari broo!!!`);
   }
+
+  return console.log(
+    `${namaKaryawan}, gaji anda bulan ini adalah ${gajiPerhari * jmlBekerja}`
+  );
 }
